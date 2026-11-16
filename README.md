@@ -1,90 +1,138 @@
-# Guardians of the Ancient Kingdom
+# ⚔️ Guardians of the Ancient Kingdom
 
-## Descripción del proyecto
+**Videojuego RPG de combate por turnos desarrollado en Python utilizando Programación Orientada a Objetos (POO).**
 
-Guardians of the Ancient Kingdom es un videojuego de combate por turnos desarrollado en Python utilizando programación orientada a objetos y la biblioteca CustomTkinter para su interfaz gráfica.
+## 📖 Descripción
 
-El jugador puede seleccionar entre tres personajes: Guerrero, Mago y Arquero. Cada personaje cuenta con características y ataques diferentes, y debe enfrentarse a un enemigo controlado por el programa.
+Guardians of the Ancient Kingdom es un videojuego de fantasía medieval en el que el jugador selecciona un personaje y se enfrenta a un Orco mediante combates por turnos.
 
-## Objetivo
+El proyecto fue desarrollado como parte del Parcial Integrador de Programación Orientada a Objetos.
 
-Desarrollar una aplicación que permita aplicar los principales conceptos de la programación orientada a objetos mediante un videojuego interactivo con interfaz gráfica.
+## 🎮 Características principales
 
-## Tecnologías utilizadas
+- Selección de tres personajes: Guerrero, Mago y Arquero.
+- Combate por turnos contra un enemigo controlado por el programa.
+- Sistema de ataque y reducción de vida.
+- Pociones para recuperar salud.
+- Barras de vida actualizadas durante el combate.
+- Registro de acciones y resultados.
+- Detección de victoria y derrota.
+- Opción para reiniciar el combate.
+- Interfaz gráfica de fantasía medieval.
+- Imágenes de personajes con fondo transparente.
+- Escenario de bosque encantado.
+- Versión ejecutable para Windows.
 
-- Python 3.
-- CustomTkinter.
-- Pytest.
+## 🛡️ Personajes
 
-## Características principales
+| Personaje | Clase | Vida | Daño |
+|---|---|---|---|
+| Arthas | Guerrero | 100 | 30 |
+| Gandalf | Mago | 80 | 45 |
+| Legolas | Arquero | 80 | 42 |
+| Orco | Enemigo | 100 | 15 |
 
-- Selección de personajes.
-- Sistema de combate por turnos.
-- Ataques con diferentes valores de daño.
-- Sistema de vida para jugador y enemigo.
-- Uso de pociones de curación.
-- Registro de acciones durante el combate.
-- Mensajes de victoria y derrota.
+## 🧠 Programación Orientada a Objetos
 
-## Conceptos de programación orientada a objetos
+El videojuego aplica los siguientes conceptos:
 
-- **Abstracción:** clase base Personaje.
-- **Herencia:** Guerrero, Mago, Arquero y Enemigo heredan de Personaje.
-- **Encapsulamiento:** atributos protegidos y propiedades para consultar los valores.
-- **Polimorfismo:** cada personaje implementa su propio método atacar.
-- **Relaciones entre objetos:** la clase Combate trabaja con los personajes participantes.
+- **Abstracción:** clase abstracta `Personaje`.
+- **Herencia:** clases `Guerrero`, `Mago`, `Arquero` y `Enemigo`.
+- **Polimorfismo:** cada personaje implementa su propio método `atacar()`.
+- **Encapsulamiento:** atributos protegidos y propiedades para gestionar las estadísticas.
+- **Relación entre objetos:** la clase `Combate` administra los personajes participantes.
 
-## Estructura del proyecto
+## 🛠️ Tecnologías utilizadas
+
+- Python 3
+- CustomTkinter
+- Tkinter Canvas
+- Pillow
+- Pytest
+- PyInstaller
+- Git y GitHub
+
+## 📂 Estructura del proyecto
 
 ```text
 GuardiansOfTheAncientKingdom/
-│
-├── main.py
-├── interfaz.py
-├── personajes.py
-├── combate.py
-├── requirements.txt
-├── README.md
-│
+├── assets/
+│   ├── fondo.png
+│   ├── guerrero.png
+│   ├── mago.png
+│   ├── arquero.png
+│   └── orco.png
 ├── docs/
 │   └── INFORME_TECNICO.md
-│
-└── pruebas/
-    └── test_personajes.py
+├── pruebas/
+│   └── test_personajes.py
+├── main.py
+├── personajes.py
+├── combate.py
+├── interfaz.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
-## Instalación
+## 🚀 Instalación y ejecución
 
-1. Tener Python instalado.
-2. Abrir una terminal en la carpeta del proyecto.
+Para ejecutar el proyecto desde el código fuente:
+
+1. Descargar o clonar el repositorio.
+2. Abrir la carpeta del proyecto.
 3. Instalar las dependencias:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-4. Ejecutar la aplicación:
+4. Ejecutar el videojuego:
 
 ```bash
 python main.py
 ```
 
-## Ejecución de las pruebas
+## 💻 Descargar el videojuego para Windows
 
-Para ejecutar las pruebas automatizadas, instalar Pytest:
+El juego también está disponible como archivo ejecutable.
 
-```bash
-python -m pip install pytest
-```
+**[Descargar desde GitHub Releases](https://github.com/pertuzpachecodarwin-ops/GuardiansOfTheAncientKingdom/releases)**
 
-Después ejecutar:
+Descarga el archivo ejecutable de la versión más reciente y ábrelo en Windows. No es necesario instalar Python.
+
+## 🧪 Pruebas automatizadas
+
+El proyecto incluye pruebas con Pytest para comprobar el funcionamiento de las clases y las reglas del combate.
+
+Para ejecutarlas:
 
 ```bash
 python -m pytest -v
 ```
 
-El proyecto cuenta con siete pruebas automatizadas para verificar el funcionamiento de los personajes, ataques, curaciones, vida, abstracción y pociones.
+Se implementaron siete pruebas relacionadas con ataques, bonificaciones, límites de vida, abstracción y uso de pociones.
 
-## Autor
+## 📋 Documentación técnica
 
-Proyecto académico desarrollado para la asignatura de Programación Orientada a Objetos.
+La carpeta `docs` contiene el informe técnico del proyecto, donde se describen su diseño, implementación y aplicación de los principios de POO.
+
+## 🔖 Historial de versiones
+
+### v1.0.0 — Primera versión ejecutable
+
+- Implementación del sistema de combate.
+- Desarrollo de la interfaz gráfica.
+- Incorporación de imágenes de personajes.
+- Integración del escenario de bosque encantado.
+- Implementación de pruebas automatizadas.
+- Generación del ejecutable para Windows.
+- Publicación del proyecto en GitHub.
+
+## 👨‍💻 Autor
+
+Darwin Jabid Pertuz Pacheco
+
+Universidad Americana
+
+Proyecto académico de Programación Orientada a Objetos.
