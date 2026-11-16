@@ -1,5 +1,7 @@
 import tkinter as tk
 from pathlib import Path
+import sys
+
 
 import customtkinter as ctk
 from PIL import Image, ImageTk
@@ -22,7 +24,12 @@ class InterfazJuego:
         self.ventana.minsize(1050, 740)
         self.ventana.configure(fg_color="#10101D")
 
-        self.carpeta_assets = Path(__file__).resolve().parent / "assets"
+        if getattr(sys, "frozen", False):
+           ruta_base = Path(sys._MEIPASS)
+        else:
+         ruta_base = Path(__file__).resolve().parent
+
+        self.carpeta_assets = ruta_base / "assets"
         self.combate = None
         self.imagen_jugador_tk = None
         self.imagen_enemigo_tk = None
